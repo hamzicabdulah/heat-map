@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #efeff5;
+  text-align: center;
+  font-family: 'Droid Sans', sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1.2em;
+}
+h1 {
+  font-family: 'Oswald', sans-serif;
+  margin: 0 0 .2em;
+}
+.legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.legend-div {
+  margin-bottom: .5em;
+}
+.legend-div div {
+  width: 35px;
+  height: 30px;
+}
+svg g, .legend-div {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: .9em;
+}
+.legend-div p {
+  margin: .3em 0 0;
+}
+rect {
+  cursor: pointer;
+}
+rect:hover {
+  fill: black;
+}
+.tip {
+  background: black;
+  color: white;
+  border-radius: 5%;
+  padding: .5em 1em;
+}
+.tip h3, .tip h4, .tip p {
+  margin: 0;
+}
+.tip p {
+  font-size: .8em;
+}
+.footer {
+  margin: 1em 0 0;
+  padding: 1em;
+  background: #1e1e15;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-around;
+  }
+}
