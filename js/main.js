@@ -2,7 +2,7 @@ d3.json('https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/mas
 
 function draw(data) {
   const docWidth = document.documentElement.clientWidth;
-  const width = (docWidth <= 768) ? docWidth * 0.94 : docWidth * 0.9;
+  const width = (docWidth <= 768) ? docWidth * 0.93 : docWidth * 0.87;
   const height = 580, margin = 40;
 
   const svg = d3.select('body')
@@ -17,7 +17,7 @@ function draw(data) {
 
   const yearScale = d3.scaleTime()
     .domain([new Date(yearExtent[0], 0), new Date(yearExtent[1], 0)])
-    .range([margin * 1.8, width - margin * 0.5]);
+    .range([margin * 1.8, width]);
 
   const monthScale = d3.scaleTime()
     .domain([new Date(2015, monthExtent[1] - 1), new Date(2015, monthExtent[0] - 1)])
