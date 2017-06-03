@@ -17,7 +17,7 @@ function draw(data) {
 
   const yearScale = d3.scaleTime()
     .domain([new Date(yearExtent[0], 0), new Date(yearExtent[1], 0)])
-    .range([margin * 1.8, width]);
+    .range([margin * 1.8, width - margin/2.5]);
 
   const monthScale = d3.scaleTime()
     .domain([new Date(2015, monthExtent[1] - 1), new Date(2015, monthExtent[0] - 1)])
@@ -63,7 +63,7 @@ function draw(data) {
   const tip = d3.tip()
     .attr('class', 'tip')
     .offset([5, 0])
-    .html((d) => '<h3>' + d.year + ' - ' + months[new Date(2017, d.month).getMonth() - 1]
+    .html((d) => '<h3>' + d.year + ' - ' + months[new Date(2017, d.month-1).getMonth()]
     + '</h3><h4>' + (baseTemp + d.variance).toFixed(2) + ' ℃'
     + '</h4><p>' + d.variance.toFixed(2) + ' ℃' + '</p>');
 
